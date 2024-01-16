@@ -1,0 +1,440 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Adding a new font */
+
+@font-face {
+     font-family: 'lapsusPro';
+     src: url('../assets/fonts/LapsusPro-Bold.otf') format('opentype');
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+     font-size: 62.5%;
+}
+
+body {
+     height: 100vh;
+     width: 100vw;
+     background-image: url('../assets/img/background.webp');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+h1{
+     font-family: 'lapsusPro';
+     font-size: 10rem;
+     text-align: center;
+     color: #febd00;
+     -webkit-text-stroke: 4px black;
+     padding-top: 3rem;
+     letter-spacing: .2rem;
+}
+
+.title a{
+     text-decoration: none;
+}
+
+.title a:link, .title a:visited{
+     color: #febd00;
+     -webkit-text-stroke: 4px black;
+}
+
+.counter{
+     text-align: center;
+     font-family: 'lapsusPro';
+     font-size: 5rem;
+     color: white;
+     -webkit-text-stroke: 3px black;
+}
+.inputArea{
+     position: relative;
+}
+.petInput{
+     margin-top: 5rem;
+     padding: 1rem;
+     font-size: 2.4rem;
+     background-color: #ffffff;
+     border:none;
+     border-radius: 10px;
+    
+}
+
+.petInput:focus{
+     outline: none;
+}
+
+ul, .petInput{
+     
+     width: 60rem;
+     align-self: center;
+     
+}
+
+ul{
+     height: 50rem;
+     overflow-y:scroll;
+     background-color: rgba(0, 0, 0, 0.75);
+     border-radius: 10px;
+     position: absolute;
+     top:10.5rem;
+     /* margin-right: 2rem; */
+     animation: rotate .6s infinite linear;
+}
+
+ul::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	/* border-radius:10px; */
+	background-color: #F5F5F5;
+     /* border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;*/
+}
+
+ul::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+     /* border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px; */
+
+}
+
+ul::-webkit-scrollbar-thumb
+{
+	/* border-top-right-radius: var(--thumbRadiusTopRight,10px); */
+     /* border-bottom-right-radius: var(--thumbRadiusBottomRight,0px); */
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #ff6a00;
+
+}
+
+
+.hidden{
+     display: none;
+}
+
+.ignoreClick{
+     pointer-events: none;
+}
+
+
+li{
+  display: flex;
+  /* width: 99.9%; */
+  height: 150px;
+  padding: 1.5rem 4rem;
+  align-items: center;   
+  justify-content: space-between;
+  transition: background-color 100ms ease-out 
+
+ 
+}
+
+li:hover{
+     background-color: rgba(101, 31, 0,0.75);;
+}
+
+li:first-child{
+     padding-top: 2rem;
+     border-top-left-radius: 10px;
+}
+
+
+
+
+
+li img{
+     max-width: 10rem;
+     
+}
+
+li span{
+     
+     color: white;
+     font-family: 'lapsusPro';
+     font-size: 4.5rem;
+     -webkit-text-stroke: 3px black;
+     
+}
+
+tr{
+     text-align: center;
+}
+
+section a{
+     position: absolute;
+}
+     
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+main{
+     width: 80%;
+     height: 100%;
+     margin: 0 auto;
+     background: linear-gradient(
+          rgba(0, 0, 0, 0.35), 
+          rgba(0, 0, 0, 0.35)
+        );
+
+    
+     
+}
+
+.inputArea{
+     display: flex;
+     flex-direction: column;
+     /* width: 50%; */
+     /* align-items: center; */
+     
+}
+
+.inputWrapper{
+     display: inline-block;
+     position: relative;
+     align-self: center;
+}
+section a{
+     position:absolute;
+     text-decoration: none;
+     display: block;
+     background-color: #ff6a00;
+     padding: 9px 27px;
+     font-family: "lapsusPro";
+     font-size: 3rem;
+     color: #651f00;
+     right: 0;
+     top:50px;
+     /* border-top-right-radius: 8px;
+     border-bottom-right-radius: 8px; */
+}
+
+table{
+     margin: 2rem 5rem 0 5rem;
+     background-color: rgba(0, 0, 0, 0.75);
+     
+     
+}
+
+th{
+     border: #4d4d4d solid 3px;
+     
+}
+
+th,td{
+     color: white;
+     
+     font-size: 3rem;
+     -webkit-text-stroke: 2px black;
+     font-family: 'lapsusPro';
+     padding: 1rem 0;
+     
+}
+
+
+
+tr{
+     border-left: #4d4d4d solid 3px;
+     border-right: #4d4d4d solid 3px;
+
+}
+
+tr:last-child{
+     border-bottom: #4d4d4d solid 3px;
+}
+
+
+
+.none{
+     background-color: rgba(255,0,0,0.6);
+}
+
+.some{
+    background-color: rgba(255,215,0,.6);
+}
+
+.all{
+     background-color: rgba(0,128,0,0.6);
+}
+
+@keyframes append-animate {
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+.newTr {
+	transform-origin: 50% 0;
+	animation: append-animate .5s linear;
+}
+
+
+footer {
+
+}
+@keyframes fadeIn {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+   }
+   
+.overlay {
+     position: fixed; /* Sit on top of the page content */
+     display: block; /*Hidden by default */
+     width: 100%; /* Full width (cover the whole page) */
+     /* height: 100%; Full height (cover the whole page) */
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+     /* Add a pointer on hover */
+     /* visibility: hidden; */
+     
+     opacity: 0;
+     height: 100%;
+     overflow: hidden;
+     transition: opacity 0.5s ease-in-out;
+   }
+
+
+   
+
+.endCard{
+     width: 600px;
+     height: 300px;
+     background-color: #ff6a00;
+     border: #651f00 solid 8px;
+     border-radius: 10px;
+     font-family: 'lapsusPro';
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     margin-left: -300px;
+     margin-top: -150px;
+     display: flex;
+     align-items:center;
+     gap: 30px;
+     justify-content: space-around;
+     box-shadow: 0px 5px 10px 5px  rgba(92, 28, 0, 0.7);     
+     transform: translateY(-5px);
+}
+
+.textBlock{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.textBlock h1{
+     font-family: 'lapsusPro';
+     font-size: 20rem;
+     text-align: center;
+     color: #febd00;
+     -webkit-text-stroke: 4px black;
+     padding-top: 3rem;
+     letter-spacing: .9rem;
+     
+}
+
+.textBlock h3{
+     
+     font-family: 'lapsusPro';
+     font-size: 5rem;
+     color: #ff6a00;
+     -webkit-text-stroke: 2px black;
+
+}
+
+
+
+
+
+.endCard img{
+     width: 30%;
+     height: auto;
+}
+
+.petInfo{
+     width: 55%;
+}
+
+
+
+.petInfo .petName{
+     font-size: 5rem;
+     align-self: flex-start;
+     translate: 0 -30%;
+}
+
+.petAbility{
+     font-size: 3rem;
+}
+.petInfo{
+     display: flex;
+     flex-direction: column;
+}
+
+.tryAgain{
+     text-decoration: none;
+     display: inline-block;
+     background-color: #ff6a00;
+     padding: 9px 27px;
+     font-family: "lapsusPro";
+     font-size: 3rem;
+     color: #651f00;
+     border-radius: 5px;
+     position: fixed;
+     top: 70%;
+     margin: 0 auto;
+     width: 200px;
+     text-align: center;
+     left: 50%;
+     margin-left: -100px;
+     box-shadow: 0px 5px 10px 5px  rgba(92, 28, 0, 0.7);     
+     transform: translateY(-5px);
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="A super auto pets themed guessing game.">
+		<meta name="keywords" content="one, two, three">
+
+		<title>Super Auto Guesser</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" href="../assets/img/tier4/turtle.webp">
+	</head>
+
+	<body>
+		<main>
+			<h1 class="title"><a href="#">Super Auto Guesser</a></h1>
+			<h2 class="counter"><strong>10</strong> guesses remaining</h2>
+			
+			<section class="inputArea">
+				<div class ="inputWrapper">
+					<input type="search" class = 'petInput' placeholder="Search for a pet..." onsubmit="return false">
+					<a href="#" role = 'button' class="guessButton">Guess</a>
+				</div>	
+				
+				<ul class="petSuggestions hidden">
+					
+				</ul>
+
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Tier</th>
+						<th>Attack</th>
+						<th>Health</th>
+						<th>Pack</th>
+						<th>Ability Trigger</th>
+						<!-- <th>Ability Category</th> -->
+					</tr>
+				</table>
+			</section>
+
+			
+		</main>
+
+		<div class="overlay ignoreClick">
+			<div class = "textBlock">
+				<h1>Victory</h1>
+				<h3>The pet was</h3>
+			</div>
+			<section class ="endCard">
+				<img src="" alt="" class = "petImage">
+				<div class = "petInfo">
+					<span class = "petName"></span>
+					<span class = "petAbility"></span>
+				</div>
+			</section>
+			<a href="" class = "tryAgain">Try Again?</a>
+		</div>
+
+		<script type="text/javascript" src="js/petDb.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+
+</html>
